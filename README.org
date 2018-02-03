@@ -1,10 +1,12 @@
 #+TITLE: Example Rofi Plugin
 * Use Makefile in project root
+- The makefile is set up to install things to ~${HOME}/.local~
 #+BEGIN_SRC sh
 make && make install
 #+END_SRC
 
 * Building and Installing a rofi plugin
+Here are some examples for use without the included makefile.
 ** Building and Installing rofi from git
  #+BEGIN_SRC sh
  git clone https://github.com/DaveDavenport/rofi
