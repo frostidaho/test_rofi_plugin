@@ -1,0 +1,33 @@
+#+TITLE: Example Rofi Plugin
+
+* Building and Installing a rofi plugin
+** Building and Installing rofi from git
+ #+BEGIN_SRC sh
+ git clone https://github.com/DaveDavenport/rofi
+ cd rofi/
+ git submodule update --init
+ autoreconf -i
+ mkdir build
+ cd build
+ ../configure --prefix=${HOME}/.local/
+ #+END_SRC
+
+** Building and Installing a plugin
+The following example builds and installs the [[https://gitcrate.org/qtools/rofi-top][rofi-top plugin]].
+
+ #+BEGIN_SRC sh
+ git clone https://gitcrate.org/qtools/rofi-top.git
+ cd rofi-top
+ autoreconf -i
+ mkdir build
+ cd build
+ PKG_CONFIG_PATH=$HOME/.local/lib/pkgconfig ../configure --prefix=${HOME}/.local/
+ make
+ make install
+ #+END_SRC
+
+** Running plugin
+
+ #+BEGIN_SRC sh
+ rofi -plugin-path ~/.local/lib/rofi -show top -modi top
+ #+END_SRC
