@@ -4,7 +4,7 @@ plugin_dir:=$(proj_dir)/plugin
 build_dir:=$(proj_dir)/plugin/build
 
 ROOT_INSTALL:=$(HOME)/.local
-PKG_CONFIG_PATH:=$(ROOT_INSTALL)lib/pkgconfig
+PKG_CONFIG_PATH:=$(ROOT_INSTALL)/lib/pkgconfig
 export PKG_CONFIG_PATH
 
 all: build
