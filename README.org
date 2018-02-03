@@ -1,4 +1,8 @@
 #+TITLE: Example Rofi Plugin
+* Use Makefile in project root
+#+BEGIN_SRC sh
+make && make install
+#+END_SRC
 
 * Building and Installing a rofi plugin
 ** Building and Installing rofi from git
